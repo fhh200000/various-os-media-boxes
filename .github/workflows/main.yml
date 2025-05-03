@@ -26,3 +26,20 @@ jobs:
       with:
         name: instruction.pdf
         path: instruction.pdf
+  instruction-latex-windows:
+    runs-on: ubuntu-latest
+    name: Compile and publish instruction pdf for Windows.
+    steps:
+    - uses: actions/checkout@v1
+    - name: Compilation
+      uses: dante-ev/latex-action@2021-A
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        root_file: 'instruction-windows.tex'
+        compiler: xelatex
+    - name: Archive PDF
+      uses: actions/upload-artifact@v4
+      with:
+        name: instruction-windows.pdf
+        path: instruction-windows.pdf
