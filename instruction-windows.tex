@@ -114,8 +114,8 @@
 	\addtolength{\abstractwidth}{\columnsep}
 	\savebox{\twocolinsert}{
 	\begin{minipage}{\abstractwidth}
-		\noindent 核准日期：2025年05月03日
-		\newline 修改日期：2025年05月03日
+		\noindent 核准日期：2025 年 05 月 03 日
+		\newline 修改日期：2025 年 05 月 03 日
 		\newline
 
 		 %\begin{mdframed}[leftline=false, rightline=false, innertopmargin=0pt, innerbottommargin=0pt, innerrightmargin=0pt, innerleftmargin=2em]
@@ -136,11 +136,11 @@
 
 			{\centering 警示语 \par}
 
-			无论是否与其它操作系统合用，安装 Microsoft Windows均存在丢失磁盘上所有内容的风险。（参见【不良反应】）
+			无论是否与其它操作系统合用，安装 Microsoft Windows 均存在丢失磁盘上所有内容的风险。（参见【不良反应】）
 
             本说明中的信息和意见无意构成法律建议，法律建议可通过咨询律师来获得。
 
-			一些硬件制造商未能提供基于PnP(Plug-n-Play, 即插即用)协议的设备驱动程序模型，或硬件无法归类于WDF(Windows Driver Framework, 视窗驱动模型)提供的任何一种设备抽象模型。这些硬件无法在Microsoft Windows中正常工作。
+			一些硬件制造商未能提供基于 PnP(Plug-n-Play, 即插即用)协议的设备驱动程序模型，或硬件无法归类于 WDF(Windows Driver Framework, 视窗驱动模型)提供的任何一种设备抽象模型。这些硬件无法在 Microsoft Windows 中正常工作。
 		\end{mdframed}
 	\end{minipage}}
 	\setlength{\columnshrink}{\ht\twocolinsert}
@@ -263,7 +263,7 @@
 		\setlength{\parskip}{0pt}
 		\setlength{\parsep}{0pt}
 
-		\item 以管理员权限在C:{\textbackslash}Windows目录下执行递归删除
+		\item 以管理员权限在 C:{\textbackslash}Windows 目录下执行递归删除
 		\item 未经确认即删除所有杀毒软件
 		\item 未确认设备盘符即执行格式化
 		\item 未确认操作即使用命令重定向
@@ -271,28 +271,26 @@
 		\item 长期在散热不良的设备上高负载使用
 	\end{itemize}
 
-    % 注释部分就不管了
+	\begin{tcolorbox}
+	\section*{RISC-V 平台安装}
+	\end{tcolorbox}
 
-	% \begin{tcolorbox}
-	% \section*{无障碍安装}
-	% \end{tcolorbox}
+	所有版本的 Microsoft Windows 不用于 RISC-V 平台。
 
-	% Debian GNU/Linux 安装介质不用于视力或运动障碍人士。
+	\medskip
 
-	% \medskip
+	\begin{tcolorbox}
+	\section*{ARM 平台安装}
+	\end{tcolorbox}
 
-	% \begin{tcolorbox}
-	% \section*{新手安装}
-	% \end{tcolorbox}
+    Microsoft Windows(x86\_64) 不用于 ARM 平台, ARM 平台需要怎管理员指导下安装 Microsoft Winddows on arm。
 
-	% Debian GNU/Linux 应谨慎用于新手安装，需要在管理员指导下进行安装，并且需要进行密切的系统监测，一旦出现系统完整度的恶化，应考虑停止使用 Debian GNU/Linux。
-
-	% \medskip
+	\medskip
 
 
-	% \begin{tcolorbox}
-	% \section*{版本迭代}
-	% \end{tcolorbox}
+	\begin{tcolorbox}
+	\section*{版本迭代}
+	\end{tcolorbox}
 
 
 	\begin{tcolorbox}
@@ -306,6 +304,14 @@
 		当您有双引导时，若另一个操作系统与 Windows 访问相同的文件系统，有可能会导致问题和数据丢失。在这种情况下，文件系统的真实状态可能与 Windows 认为在“启动”之后的情况不同，并且可能在进一步写入文件系统时导致文件系统损坏。因此，在双引导设置中，为了避免文件系统损坏，有必要在 Windows 中禁用“快速启动”功能。
 
 		在罕见情况中已观察到，在使用 Windows 进行系统更新时，可能会出现重新启动后引导被破坏从而导致 Linux 无法启动的情况。同时，若在安装过程中将引导信息写入与 Windows 所在的物理磁盘 MBR 内，将导致后者无法正常启动。
+
+        \item 与 x86\_64 架构 Mac 设备上的 macOS 的相互作用
+
+        Windows 在此环境中可能需要专用驱动才能充分利用 Mac 硬件功能。
+
+        用户也可通过虚拟化软件(如 Parallels Desktop)在不重启的情况下同时运行两系统。
+
+        Apple Silicon 架构 Mac 设备不支持传统 Boot Camp 安装方式
 
 		\item 与其他 Windows 版本的相互作用
 
@@ -329,7 +335,7 @@
 	\section*{包装}
 	\end{tcolorbox}
 
-	刻录有 Microsoft Windows 安装映像的、兼容 USB 3.0 协议的8GiB闪存驱动器。
+	刻录有 Microsoft Windows 安装映像的、兼容 USB 3.0 协议的 8GiB 闪存驱动器。
 
 	1 枚/盒
 
@@ -349,9 +355,9 @@
 	\section*{执行标准}
 	\end{tcolorbox}
 	\begin{tabularx}{\linewidth}{@{}ll@{}}
-	
+
 	Microsoft 软件许可条款
- 
+
 	\end{tabularx}
 
 	\medskip
@@ -379,14 +385,15 @@
 	\section*{说明书}
 	\end{tcolorbox}
 	\begin{tabularx}{\linewidth}{@{}ll@{}}
-		\multirow{2}{*}{}{编审：} & @YukariChiba\\
+		\multirow{2}{*}{}{编审：} & @YukariChiba \\
 		~ & @moesoha \\
         ~ & @Tibrella \\
-	~ & @fhh200000 \\
+        ~ & @fhh200000 \\
+        ~ & @wirano \\
 		图形: & @YJBeetle\\
         ~ & @Isoheptane \\
-		GitHub: & fhh200000/various-os-media\\
-	& -boxes\\
+		GitHub: & fhh200000/various-os-media \\
+        & -boxes \\
 	\end{tabularx}
 
 	\medskip
